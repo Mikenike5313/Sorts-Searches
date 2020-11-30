@@ -147,7 +147,7 @@ public class Median {
 				return mid;
 			}
 		}
-		return -1;
+		return -start-1;
 	}
 
 
@@ -192,6 +192,6 @@ public class Median {
 
 		//is median in the set?
 		int index = binary_search((long)median, arr, size);
-		System.out.println((Math.floor(median) == median && index != -1) ? "Median is at index " + index : "Median is not in the set");
+		System.out.println((Math.floor(median) == median && index < 0) ? "Median is at index " + index : "Median is not in the set");
 	}
 }
